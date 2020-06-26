@@ -6,7 +6,6 @@
 
 #include <robotnik_elevator_component/robotnik_elevator_component.h>
 
-using namespace robotnik_elevator_component;
 
 
 class RobotnikGazeboElevatorNode : public RobotnikElevatorComponent
@@ -21,6 +20,7 @@ public:
 	floor_height_=10.0;
 	elevator_cab_joint_name_="elevatorcab_joint";
 	elevator_goto_step = 0;
+  rosReadParams();
   }
 
   virtual ~RobotnikGazeboElevatorNode()
